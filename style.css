@@ -1,0 +1,165 @@
+body{
+    margin: 0;
+}
+
+.wrapper{
+    height:100vh;
+    overflow-y:auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.close1,
+.close2,
+.close3,
+.close4{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.close1{
+    transform: translateZ(-2.5px) scale(1.255);
+}
+.close2{
+    transform: translateZ(-6px) scale(1.6);
+}
+.close3{
+    transform: translateZ(-7px) scale(1.77);
+}
+.close4{
+    transform: translateZ(-10px) scale(2);
+}
+
+.title{
+    min-height: 30vh;
+    margin: -30vh 0 -25vh 00vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;
+    color: rgb(197, 210, 221);
+    text-shadow: 0 0 5px black;
+    text-decoration: none;
+}
+.subtitle{
+    min-height: 30vh;
+    margin: -30vh 0 -50vh -30.5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color: rgb(197, 210, 221);
+    text-shadow: 0 0 5px black;
+    text-decoration: none;
+}
+
+.img_me{
+    float: right;
+}
+
+.img_gbg{
+    float: left;
+}
+
+
+
+.buttons{
+    min-height: 30vh;
+    margin: -30vh 0 38vh 74vw;
+    color: rgb(41, 102, 145);
+    position: absolute;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.socials{
+    position: absolute;
+    min-height: 30vh;
+    margin: -30vh 0 30vh -85vw;
+    text-decoration: none;
+}
+
+.btn-primary {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;        
+    background-color: rgba(197, 210, 221, 0);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color:rgb(206, 216, 225)
+}
+.btn-primary:hover{
+    color: #20208e;
+}
+
+
+.btn-app {
+    position: absolute;
+    margin: -5vh 0 -40vh 28vw;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;        
+    background-color: rgb(14, 49, 80);
+    border: 7px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(165, 202, 232);
+}
+.btn-app:hover{
+    color: #72b4cc;
+}
+    
+
+section{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    padding :2rem;
+    background-color: #094663;
+    color: rgb(165, 202, 232)
+}
+
+.project-info{
+    margin: -2vh 0 20vh 17vw;
+}
+
+.kirks-info{
+    margin: -2vh 0 20vh 2vw;
+}
+
+.kirks-info2{
+    margin: -2vh 0 20vh 2vw;
+}
+
+.kirks-info3{
+    margin: 2vh 0 -50vh 2vw;
+}
+
+footer{
+    padding: 2rem;
+    color:rgb(206, 216, 225);
+}
+
+body{
+    background: #094663;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.social-icon{
+    color: #e7e7e7;
+    transition: color 0.2s;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icon:hover{
+        color: #20208e;
+    }
