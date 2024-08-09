@@ -17,6 +17,7 @@ header{
     height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
+    text-decoration: none !important;
 }
 
 .close1,
@@ -49,7 +50,7 @@ header{
     font-size: 3rem;
     color: rgb(197, 210, 221);
     text-shadow: 0 0 5px black;
-    text-decoration: none;
+    text-decoration: none  !important;
 }
 .subtitle{
     min-height: 30vh;
@@ -77,7 +78,7 @@ header{
     color: rgb(41, 102, 145);
     position: absolute;
     font-size: 1rem;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .socials{
@@ -117,6 +118,22 @@ header{
 .btn-app:hover{
     color: #72b4cc;
 }
+
+.btn-app2 {
+    position: absolute;
+    margin: -5vh 0 -40vh 10vw;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;        
+    background-color: rgb(14, 49, 80);
+    border: 7px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(165, 202, 232);
+}
+.btn-app2:hover{
+    color: #72b4cc;
+}
     
 
 section{
@@ -129,6 +146,10 @@ section{
 
 .project-info{
     margin: -2vh 0 20vh 17vw;
+}
+
+.project-info1{
+    margin: -2vh 0 20vh 28vw;
 }
 
 .kirks-info{
