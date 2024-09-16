@@ -70,15 +70,50 @@ header{
     float: left;
 }
 
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 3vh 0 0vh 0vw;
+    padding: 0;
+    display: flex; /* Arrange items horizontally */
+    justify-content: flex-end; /* Align items to the right */
+    gap: 20px; /* Add space between the links */
+}
 
+nav ul li {
+    display: inline; /* Make list items inline */
+}
+
+.nav-link {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    font-size: 17px; /* Font size */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;; /* Font family */
+    padding: 5px 10px; /* Padding for clickable area */
+    transition: color 0.3s ease; /* Smooth hover effect */
+    cursor: pointer; /* Change cursor on hover */
+    white-space: nowrap; /* Prevent line breaks */
+    font-weight: 500; /* Use a lighter font weight */
+}
+
+/* Hover effect */
+.nav-link:hover {
+    color: #20208e; /* Change text color on hover */
+}
+
+/* Center the nav menu horizontally without wrapping */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Right-align the navigation */
+    padding-right: 20px; /* Add padding from the right edge */
+}
 
 .buttons{
     min-height: 30vh;
     margin: -30vh 0 38vh 74vw;
-    color: rgb(41, 102, 145);
+    color: 20208e(41, 102, 145);
     position: absolute;
     font-size: 1rem;
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 .socials{
@@ -166,7 +201,7 @@ section{
 
 footer{
     padding: 2rem;
-    color:rgb(206, 216, 225);
+    color:rgb(165, 202, 232)
 }
 
 body{
@@ -184,3 +219,4 @@ body{
 .social-icon:hover{
         color: #20208e;
     }
+    
