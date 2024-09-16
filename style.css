@@ -138,22 +138,6 @@ nav {
 }
 
 
-.btn-app {
-    position: absolute;
-    margin: -5vh 0 -40vh 28vw;
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;        
-    background-color: rgb(14, 49, 80);
-    border: 7px solid transparent;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    color: rgb(165, 202, 232);
-}
-.btn-app:hover{
-    color: #72b4cc;
-}
-
 .btn-app2 {
     position: absolute;
     margin: -5vh 0 -40vh 10vw;
@@ -165,9 +149,32 @@ nav {
     font-size: 16px;
     font-weight: 500;
     color: rgb(165, 202, 232);
+    cursor: pointer; /* Add this to change the cursor on hover */
 }
-.btn-app2:hover{
-    color: #72b4cc;
+
+/* Hover effect for the "Visit" button */
+.btn-app2:hover {
+    color: #4c4ebf;
+}
+
+/* For the "Figma" button */
+.btn-app {
+    position: absolute;
+    margin: -5vh 0 -40vh 28vw;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;        
+    background-color: rgb(14, 49, 80);
+    border: 7px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(165, 202, 232);
+    cursor: pointer; /* Add this to change the cursor on hover */
+}
+
+/* Hover effect for the "Figma" button */
+.btn-app:hover {
+    color: #4c4ebf;
 }
     
 
