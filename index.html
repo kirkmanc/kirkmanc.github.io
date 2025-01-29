@@ -17,8 +17,42 @@
                 <img src="Mount1.png" class="close2">
                 <img src="SKY4.png" class="close4">
 
-                <h1 class="title"> Hi, I'm Conner</h1>
-                <h7 class="subtitle"> Welcome to my website!</h7>
+                <h1 class="title">Hi, I'm Conner</h1>
+                <h2 class="subtitle" id="typing-text"></h2>
+
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const textElement = document.getElementById("typing-text");
+                        const text = "Welcome to my website!";
+                        let index = 0;
+                        let isDeleting = false;
+                
+                        function typeEffect() {
+                            if (!isDeleting) {
+                                textElement.textContent = text.substring(0, index) + "|"; // Cursor effect
+                                index++;
+                                if (index > text.length) {
+                                    setTimeout(() => (isDeleting = true), 1000); // Pause before deleting
+                                }
+                            } else {
+                                textElement.textContent = text.substring(0, index) + "|";
+                                index--;
+                                if (index < 0) {
+                                    isDeleting = false;
+                                }
+                            }
+                
+                            let speed = isDeleting ? 50 : 100; // Faster deletion
+                            setTimeout(typeEffect, speed);
+                        }
+                
+                        // Ensure the element is visible
+                        textElement.style.display = "block";
+                        typeEffect();
+                    });
+                </script>
+
                 <h2 class="buttons">
                     <nav>
                         <ul>
@@ -48,152 +82,118 @@
         <main>
             <article id="projects"></article>
                 <h2> My Projects </h2>
-                <br>
-
-                <figure>
-                    <img class="img_gbg" src="Kirks3.png" height="110" width="290">
-                </figure>
-                <br><br> 
-                <p class="project-info1">   
-                    <b>Kirk's Website</b> <br><br>
-                    A website developed to let customers easily find and aquire parts they need 
-
-                    <a href="https://www.kirks.com/" target="_blank"> 
-                        <button type="button" 
-                                class="btn-app2">
-                            <b>Visit</b>
-                        </button>
+                <div class="projects-container">
+                    <a href="https://kirks.com" target="_blank" class="project-link">
+                        <div class="project-card">  
+                            <img class="project-img" src="kirkk.png" alt="Kirk's Website">
+                            <div class="project-overlay">
+                                <p><b>Kirk's Website</b><br><br>Website developed to let customers easily find and acquire parts they need.</p>
+                            </div>
+                        </div>
                     </a>
+                
+                    <div class="project-card">
+                        <img class="project-img" src="Go Blue Global.png" alt="Go Blue Global">
+                        <div class="project-overlay">
+                            <p><b>Go Blue Global</b><br><br>App to connect study abroad students, explore programs, and share experiences.</p>
+                        </div>
+                    </div>
 
-
-
-                <figure>
-                    <img class="img_gbg" src="Go Blue Global.png" height="147.5" width="140">
-                </figure>
-                <p class="project-info">
-                    <br><br>    
-                    <b>Go Blue Global</b> <br><br>
-                    App to connect people studying abroad: explore programs, meet new people who are going to <br>same location, and post reviews about their experiences abroad.
-
-                    <a href="https://www.figma.com/proto/OWbIC3PWg0WlZJRdMhnDSU/KTP?node-id=1-5&starting-point-node-id=1%3A2&scaling=scale-down&content-scaling=fixed&t=Fj28yMfvPDDkwtJc-1" target="_blank"> 
-                        <button type="button" 
-                                class="btn-app">
-                            <b>Figma</b>
-                        </button>
+                    <a href="https://ktpmichigan.com/life/" target="_blank" class="project-link">
+                        <div class="project-card">
+                            <img class="project-img" src="ktpv2.webp" alt="KTP">
+                            <div class="project-overlay">
+                                <p><b>KTP Life App</b><br><br>iOS and Android app for managing rush, tracking membership, and 
+                                    working with alumni.</p>
+                            </div>
+                        </div>
                     </a>
+                
+                    <div class="project-card">
+                        <img class="project-img" src="euchure.png" alt="Euchre">
+                        <div class="project-overlay">
+                            <p><b>Euchre</b><br><br>Play euchre with friends or challenge an AI opponent.</p>
+                        </div>
+                    </div>
 
+                    <div class="project-card">
+                        <img class="project-img" src="breastcancer.jpg" alt="KTP">
+                        <div class="project-overlay">
+                            <p><b>Breast Cancer Screener</b><br><br>This project uses machine learning to classify breast cancer types from histopathological images, optimizing CNN models for accuracy and AUROC                                .</p>
+                        </div>
+                    </div>
 
-                    <br>
-                    <br>
                     
 
-                </p>
-                <figure>
-                    <img class="img_gbg" src="euch3.png" height="145" width="145">
-                </figure>
-                <p class="project-info">
-                    <br><br>    
-                    <b>Euchre</b> <br><br>
-                    Application that lets you play euchre with friends or challenge an AI opponent with basic euchre <br> knowledge to test your skills
-                    <br><br>
+                
+                </div>
 
-                </p>
-
+            </p>
         </main>
+        <br>
+        <br>     
+
         <hr>
+
         <main>
             <article id="work"></article>
-                <h2> Work </h2>
-                <p>
-                    <br>
-                    <figure>
-                        <img class="img_gbg" src="Kirks3.png" height="130" width="310">
-                    </figure>
-                    <br>
-                    <p2 class="kirks-info">
-                    <b>Kirks - <i>Web Developer</i></b><br><br>
-                    </p2>
+            <h2> Work </h2>
+            <div class="work-container">
+                <div class="work-card">
+                    <img class="work-img" src="KirksWork.png" alt="Kirks">
+                    <div class="work-overlay">
+                        <p><b>Software Developer Intern</i></b><br><br>
+                            Leveraged competitive pricing data to implement C++ pricing models, boosting product margins by 30%, while collaborating across teams to enhance website visuals
+                        </div>
+                </div>
 
-                    <p3 class="kirks-info2">
-                        Captured high-quality images of parts for display on the website, leveraging
-                    </p3>
-                    <br>
-
-                    <p4 class="kirks-info3">
-                        competitive pricing data to implement strategic, dynamic pricing models
-                        <br><br><br><br><br>
-                    </p4>
+                <div class="work-card">
+                    <img class="work-img" src="FrimoSS.png" alt="Frimo">
+                    <div class="work-overlay">
+                        <p><b>Accounting Analyst</i></b><br><br>
+                            Processed and verified accounts payable invoices, optimized financial workflows with SAP, and assisted in expense reconciliation, contributing to a successful state audit
+                    </div>
+                </div>
+        
+                <div class="work-card">
+                    <img class="work-img" src="GPYC.png" alt="Grosse Pointe Yacht Club">
+                    <div class="work-overlay">
+                        <p><b>Sailing Program Lead</i></b><br><br>
+                            Designed and led sailing lessons for ages 8-15 to develop racing and seamanship skills securing 10+ private clients through targeted marketing and national referrals
+                    </div>
+                </div>
     
-                    <figure>
-                        <img class="img_gbg" src="gpyc2.png" height="150" width="180">
-                    </figure>
-                    <br>
-                    
-                    <p5 class="kirks-info">
-                        <b>Grosse Point Yacht Club - <i>Sailing Instructor</i></b><br><br>
-                    </p5>
-
-                    <p6 class="kirks-info2">
-                        Organized and executed lesson plans for sailors aged 8 - 15 to develop racing and seamanship skills,
-                    </p6>
-                    <br>
-
-                    <p7 class="kirks-info3">
-                         Generated private clients through targeted local marketing and referrals from national sailing
-                    </p7>
-
-                    <br>
-
-                    <p13 class="kirks-info3">
-                        community, and became U.S. Sailing Level 2 Instructor, First Aid, CPR and AED certified
-
-                    </p13>
-                
-                
-                    <br><br><br><br><br><br>
-
-                    <figure>
-                        <img class="img_gbg" src="frimo.jpg" height="150" width="150">
-                    </figure>
-                    <br>
-                    <p8 class="kirks-info">
-                        <b>Frimo - <i>Accounting Analyst</i></b><br><br>
-                        </p8>
-    
-                        <p9 class="kirks-info2">
-                            Processed, coded and verified accounts payable invoices, developed expertise 
-                        </p9>
-                        <br>
-    
-                        <p10 class="kirks-info3">
-                            in general ledger accounting and SAP financial, and assisted finance team with expense
-                        </p10>
-
-                        <br>
-
-                        <p11 class="kirks-info3">
-                            report reconciliation for state audit
-                        </p11>
-
-                    <br><br><br><br><br><br><br><br>
-                </p>
+            </div>
         </main>
+        <br>
+        <br>
         <hr>
+
+
         <main>
             <article id="about"></article>
-                <h2> About Me </h2>
+            <h2> About Me </h2>
+            <div class="about-container">
                 <figure>
-                    <img class="img_me" src="Me and mom.jpeg" height="270" width="200">
+                    <img class="img_me" src="Me and mom.jpeg" alt="Conner Kirkman" height="270" width="200">
                 </figure>
-                <p1>
-
-                    <br>
-                    <br>
-                    Hi! I'm Conner Kirkman,<br> a student at the University of Michigan. I've always loved computers and I'm most<br> interested in topics such as cyber security, software development,and game development. <br>When I'm not hitting the books, you'll likely find me outdoors. I have a passion for sailing<br> and love the thrill of being out on the water. Running is another way I stay active,<br> and I enjoy spending as much time outside as possible, whether it's running, biking,<br> or just soaking up the sunshine. When it's time to unwind, I enjoy diving into video games.<br> They provide a great way to relax and connect with friends.
-                    <br><br><br><br><br><br><br>
-                </p1>
-
+                <div class="about-text">
+                    <p>
+                        <b>Hi again! I'm Conner Kirkman,</b> a student at the University of Michigan. I've always loved computers, and I'm most 
+                        interested in topics such as software development, artificial intelligence and game development. <br><br>
+                        
+                        When I'm not hitting the books, you'll likely find me outdoors. I have a passion for sailing and love the 
+                        thrill of being out on the water. Running is another way I stay active, and I enjoy spending as much time 
+                        outside as possible—whether it's running, biking, or just soaking up the sunshine.<br><br>
+                        
+                        When it's time to unwind, I love diving into video games. They provide a great way to relax and connect 
+                        with friends.
+                    </p>
+                </div>
+            </div>
         </main>
+        <br>
+        <br>
         <hr>
     </section>
         <footer>
@@ -205,4 +205,3 @@
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
-
