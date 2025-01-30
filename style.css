@@ -13,11 +13,15 @@ header{
     position: relative;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
     text-decoration: none !important;
+
+    
 }
 
 .close1,
@@ -51,13 +55,41 @@ header{
     text-shadow: 0 0 5px black;
     text-decoration: none !important;
     text-align: center;
-    margin-bottom: 160px;
+    margin-bottom: 4F0px;
 }
 .subtitle {
-    position: absolute; /* Keeps it independent of the title */
-    top: 19rem; /* Increase this value to move it lower */
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* Change from absolute */
+    top: auto; /* Remove fixed top position */
+    left: auto; /* Remove fixed left position */
+    transform: none; /* Remove manual centering */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color: rgb(197, 210, 221);
+    text-shadow: 0 0 5px black;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: -5rem; /* Adjust as needed */
+}
+
+h2 {
+    font-size: 2.5rem; /* Increase the font size */
+    font-weight: bold; /* Make it stand out */
+    text-align: center; /* Keep it centered */
+    margin-top: 2rem; /* Adjust spacing */
+    color: rgb(99, 163, 219); /* Match the existing theme */
+    text-shadow: 0 0 8px rgb(38, 38, 38); /* Add a subtle glow effect */
+}
+
+#typing-text {
+    position: relative; /* Change from absolute to relative */
+    margin-top: -2rem; /* Moves it up slightly relative to .title */
+    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2rem;
     color: rgb(197, 210, 221);
@@ -66,6 +98,8 @@ header{
     overflow: hidden;
     text-align: center;
 }
+
+
 .img_me{
     float: right;
 }
