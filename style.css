@@ -42,7 +42,7 @@ header {
   transform: translateZ(-7px) scale(1.77);
 }
 .close4 {
-  transform: translateZ(-10px) scale(2);
+  transform: translateX(-0.4%) translateZ(-10px) scale(2);
 }
 
 .title {
