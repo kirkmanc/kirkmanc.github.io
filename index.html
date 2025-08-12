@@ -1,210 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Conner Kirkman">
-        <meta name="description" content="The offical website of Conner Kirkman">
-        <title>Conner Kirkman</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Conner Kirkman">
+    <meta name="description" content="The official website of Conner Kirkman">
+    <title>Conner Kirkman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="BOAT5.png" class="close1">
+            <img src="MOUNT2TRY3.png" class="close3">
+            <img src="Mount1.png" class="close2">
+            <img src="SKY4.png" class="close4">
 
-        <div class="wrapper">
-            <header>
-                <img src="BOAT5.png" class="close1">
-                <img src="MOUNT2TRY3.png" class="close3">
-                <img src="Mount1.png" class="close2">
-                <img src="SKY4.png" class="close4">
+            <h1 class="title">Hi, I'm Conner</h1>
+            <h2 class="subtitle" id="typing-text"></h2>
 
-                <h1 class="title">Hi, I'm Conner</h1>
-                <h2 class="subtitle" id="typing-text"></h2>
-
-
-                <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const textElement = document.getElementById("typing-text");
-                        const texts = ["Welcome to my website!", "Enjoy scrolling!"];
-                        let textIndex = 0;
-                        let index = 0;
-                        let isDeleting = false;
-                
-                        function typeEffect() {
-                            let currentText = texts[textIndex];
-                
-                            if (!isDeleting) {
-                                textElement.textContent = currentText.substring(0, index) + "|";
-                                index++;
-                
-                                if (index > currentText.length) {
-                                    setTimeout(() => (isDeleting = true), 1000);
-                                }
-                            } else {
-                                textElement.textContent = currentText.substring(0, index) + "|";
-                                index--;
-                
-                                if (index < 0) {
-                                    isDeleting = false;
-                                    textIndex = (textIndex + 1) % texts.length;
-                                }
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const textElement = document.getElementById("typing-text");
+                    const texts = ["Welcome to my website!", "Enjoy scrolling!"];
+                    let textIndex = 0;
+                    let index = 0;
+                    let isDeleting = false;
+            
+                    function typeEffect() {
+                        let currentText = texts[textIndex];
+            
+                        if (!isDeleting) {
+                            textElement.textContent = currentText.substring(0, index) + "|";
+                            index++;
+            
+                            if (index > currentText.length) {
+                                setTimeout(() => (isDeleting = true), 1000);
                             }
-                
-                            let speed = isDeleting ? 50 : 100;
-                            setTimeout(typeEffect, speed);
+                        } else {
+                            textElement.textContent = currentText.substring(0, index) + "|";
+                            index--;
+            
+                            if (index < 0) {
+                                isDeleting = false;
+                                textIndex = (textIndex + 1) % texts.length;
+                            }
                         }
-                
-                        textElement.style.display = "block";
-                        typeEffect();
-                    });
-                </script>
+            
+                        let speed = isDeleting ? 50 : 100;
+                        setTimeout(typeEffect, speed);
+                    }
+            
+                    textElement.style.display = "block";
+                    typeEffect();
+                });
+            </script>
+            
 
-                <h2 class="buttons">
-                    <nav>
-                        <ul>
-                            <li><a href="#projects" class="nav-link">Projects</a></li>
-                            <li><a href="#work" class="nav-link">Work</a></li>
-                            <li><a href="#about" class="nav-link">About Me</a></li>
-                        </ul>
-                    </nav>
+            <h2 class="buttons">
+                <nav>
+                    <ul>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#work" class="nav-link">Work</a></li>
+                        <li><a href="#about" class="nav-link">About Me</a></li>
+                    </ul>
+                </nav>
             </h2>
+
             <h3 class="socials">
-                <a class="social-icon" href="https://www.instagram.com/kirkman.conner/" target="_blank">
+                <a class="social-icon" href="https://www.instagram.com/kirkman.conner/" target="_blank" aria-label="Instagram">
                     <ion-icon name="logo-instagram"></ion-icon>
                 </a>
-                <a class="social-icon" href="https://www.linkedin.com/in/conner-kirkman" target="_blank">
+                <a class="social-icon" href="https://www.linkedin.com/in/conner-kirkman" target="_blank" aria-label="LinkedIn">
                     <ion-icon name="logo-linkedin"></ion-icon>
                 </a>    
-                <a class="social-icon" href="https://mailto:kirkmanc@umich.edu" target="_blank">
+                <a class="social-icon" href="mailto:kirkmanc@umich.edu" target="_blank" aria-label="Email">
                     <ion-icon name="mail-outline"></ion-icon>
                 </a>
-                
             </h3>
 
 
-            </header>
-            <section>
-        <hr>
-        <main>
-            <article id="projects"></article>
-                <h2> My Projects </h2>
-                <div class="projects-container">
-                    <a href="https://kirks.com" target="_blank" class="project-link">
-                        <div class="project-card">  
-                            <img class="project-img" src="kirkk.png" alt="Kirk's Website">
-                            <div class="project-overlay">
-                                <p><b>Kirk's Website</b><br><br>Website developed to let customers easily find and acquire parts they need.</p>
-                            </div>
-                        </div>
-                    </a>
-                
-                    <div class="project-card">
-                        <img class="project-img" src="Go Blue Global.png" alt="Go Blue Global">
-                        <div class="project-overlay">
-                            <p><b>Go Blue Global</b><br><br>App to connect study abroad students, explore programs, and share experiences.</p>
-                        </div>
-                    </div>
-
-                    <a href="https://ktpmichigan.com/life/" target="_blank" class="project-link">
-                        <div class="project-card">
-                            <img class="project-img" src="ktpv2.webp" alt="KTP">
-                            <div class="project-overlay">
-                                <p><b>KTP Life App</b><br><br>iOS and Android app for managing rush, tracking membership, and 
-                                    working with alumni.</p>
-                            </div>
-                        </div>
-                    </a>
-                
-                    <div class="project-card">
-                        <img class="project-img" src="euchure.png" alt="Euchre">
-                        <div class="project-overlay">
-                            <p><b>Euchre</b><br><br>Play euchre with friends or challenge an AI opponent.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <img class="project-img" src="breastcancer.jpg" alt="KTP">
-                        <div class="project-overlay">
-                            <p><b>Breast Cancer Screener</b><br><br>This project uses machine learning to classify breast cancer types from histopathological images, optimizing CNN models for accuracy and AUROC                                .</p>
-                        </div>
-                    </div>
-
-                    
-
-                
-                </div>
-
-            </p>
-        </main> 
-
-        <hr>
-
-        <main>
-            <article id="work"></article>
-            <h2> Work </h2>
-            <div class="work-container">
-                <div class="work-card">
-                    <img class="work-img" src="KirksWork.png" alt="Kirks">
-                    <div class="work-overlay">
-                        <p><b>Software Engineering Intern</i></b><br><br>
-                            Leveraged competitive pricing data to implement C++ pricing models, boosting product margins by 30%, while collaborating across teams to enhance website visuals
-                        </div>
-                </div>
-
-                <div class="work-card">
-                    <img class="work-img" src="FrimoSS.png" alt="Frimo">
-                    <div class="work-overlay">
-                        <p><b>Accounting Analyst</i></b><br><br>
-                            Processed and verified accounts payable invoices, optimized financial workflows with SAP, and assisted in expense reconciliation, contributing to a successful state audit
-                    </div>
-                </div>
-        
-                <div class="work-card">
-                    <img class="work-img" src="GPYC.png" alt="Grosse Pointe Yacht Club">
-                    <div class="work-overlay">
-                        <p><b>Sailing Program Lead</i></b><br><br>
-                            Designed and led sailing lessons for ages 8-15 to develop racing and seamanship skills securing 10+ private clients through targeted marketing and national referrals
-                    </div>
-                </div>
-    
-            </div>
-        </main>
-        <br>
-        <br>
-        <hr>
+        </header>
 
 
-        <main>
-            <article id="about"></article>
-            <h2> About Me </h2>
-            <div class="about-container">
-                <figure>
-                    <img class="img_me" src="Me and mom.jpeg" alt="Conner Kirkman" height="270" width="200">
-                </figure>
-                <div class="about-text">
-                    <p>
-                        <b>Hi again! I'm Conner Kirkman,</b> a student at the University of Michigan. I've always loved computers, and I'm most 
-                        interested in topics such as software development, artificial intelligence and game development. <br><br>
-                        
-                        When I'm not hitting the books, you'll likely find me outdoors. I have a passion for sailing and love the 
-                        thrill of being out on the water. Running is another way I stay active, and I enjoy spending as much time 
-                        outside as possible—whether it's running, biking, or just soaking up the sunshine.<br><br>
-                        
-                        When it's time to unwind, I love diving into video games. They provide a great way to relax and connect 
-                        with friends.
-                    </p>
-                </div>
-            </div>
-        </main>
-        <br>
-        <br>
-        <hr>
-    </section>
+        <!-- PROJECTS -->
+<section id="projects" class="section projects">
+  <main>
+    <hr>
+    <h2>My Projects</h2>
+
+    <!-- Underwater bubbles -->
+    <div class="underwater-effects">
+      <div class="bubble bubble-1"></div>
+      <div class="bubble bubble-2"></div>
+      <div class="bubble bubble-3"></div>
+      <div class="bubble bubble-4"></div>
+      <div class="bubble bubble-5"></div>
+      <div class="bubble bubble-6"></div>
+      <div class="bubble bubble-7"></div>
+      <div class="bubble bubble-8"></div>
+    </div>
+
+
+
+    <div class="projects-container">
+      <div class="project-card">
+        <img class="project-img" src="MiHub.png" alt="MiHub Layout Tool">
+        <div class="project-overlay">
+          <p><b>MiHub - Layout Tool</b><br><br>Tool designed to optimize organization, tracking, and placement of the warehouse inventory and modular job units.</p>
+        </div>
+      </div>
+
+      <a href="https://kirks.com" target="_blank" class="project-link">
+        <div class="project-card">
+          <img class="project-img" src="kirkk.png" alt="Kirk's Website">
+          <div class="project-overlay">
+            <p><b>Kirk's Website</b><br><br>Website developed to let customers easily find and acquire parts they need.</p>
+          </div>
+        </div>
+      </a>
+
+      <div class="project-card">
+        <img class="project-img" src="Go Blue Global.png" alt="Go Blue Global">
+        <div class="project-overlay">
+          <p><b>Go Blue Global</b><br><br>App to connect study abroad students, explore programs, and share experiences.</p>
+        </div>
+      </div>
+
+      <a href="https://ktpmichigan.com/life/" target="_blank" class="project-link">
+        <div class="project-card">
+          <img class="project-img" src="ktpv2.webp" alt="KTP">
+          <div class="project-overlay">
+            <p><b>KTP Life App</b><br><br>iOS and Android app for managing rush, tracking membership, and working with alumni.</p>
+          </div>
+        </div>
+      </a>
+
+      <div class="project-card">
+        <img class="project-img" src="euchure.png" alt="Euchre">
+        <div class="project-overlay">
+          <p><b>Euchre</b><br><br>Play euchre with friends or challenge an AI opponent.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img class="project-img" src="breastcancer.jpg" alt="Breast Cancer Screener">
+        <div class="project-overlay">
+          <p><b>Breast Cancer Screener</b><br><br>This project utilized machine learning to classify breast cancer types from histopathological images.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- WORK -->
+<section id="work" class="section work">
+  <main>
+    <hr>
+    <h2>Work</h2>
+
+    <!-- Underwater current effect -->
+    <div class="underwater-effects">
+        <div class="bubble work-bubble-1"></div>
+        <div class="bubble work-bubble-2"></div>
+        <div class="bubble work-bubble-3"></div>
+        <div class="bubble work-bubble-4"></div>
+        <div class="bubble work-bubble-5"></div>
+        <div class="bubble work-bubble-6"></div>
+        <div class="bubble work-bubble-7"></div>
+        <div class="bubble work-bubble-8"></div>
+        <div class="bubble work-bubble-9"></div>
+        <div class="bubble work-bubble-10"></div>
+        <div class="bubble work-bubble-11"></div>
+        <div class="bubble work-bubble-12"></div>
+    </div>
+
+    <div class="work-container" id="work-container">
+      <div class="work-card">
+        <img class="work-img" src="miller6.png" alt="Miller Industries">
+        <div class="work-overlay">
+          <p><b>Software Developer Intern</b><br><br>
+            Designed and developed a full-stack tool in React, Node.js, and SQL. Streamlining workflows in collaboration with operations and production teams.
+          </p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <img class="work-img" src="KirksWork.png" alt="Kirks">
+        <div class="work-overlay">
+          <p><b>Software Developer Intern</b><br><br>
+            Leveraged competitive pricing data to implement C++ pricing models, boosting product margins by 30%, while collaborating across teams to enhance website visuals
+          </p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <img class="work-img" src="FrimoSS.png" alt="Frimo">
+        <div class="work-overlay">
+          <p><b>Accounting Analyst</b><br><br>
+            Processed and verified accounts payable invoices, optimized financial workflows with SAP, and assisted in expense reconciliation, contributing to a successful state audit
+          </p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <img class="work-img" src="GPYC.png" alt="Grosse Pointe Yacht Club">
+        <div class="work-overlay">
+          <p><b>Sailing Program Lead</b><br><br>
+            Designed and led sailing lessons for ages 8-15 to develop racing and seamanship skills securing 10+ private clients through targeted marketing and national referrals
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section about">
+  <main>
+    <hr>
+    <h2>About Me</h2>
+
+    <!-- Deep water effect -->
+    <div class="deep-water-effect"></div>
+
+    <div class="underwater-effects">
+    <div class="bubble about-bubble-1"></div>
+    <div class="bubble about-bubble-2"></div>
+    <div class="bubble about-bubble-3"></div>
+    <div class="bubble about-bubble-4"></div>
+    <div class="bubble about-bubble-5"></div>
+    <div class="bubble about-bubble-6"></div>
+    <div class="bubble about-bubble-7"></div>
+    <div class="bubble about-bubble-8"></div>
+    <div class="bubble about-bubble-9"></div>
+    <div class="bubble about-bubble-10"></div>
+    <div class="bubble about-bubble-11"></div>
+    <div class="bubble about-bubble-12"></div>
+    </div>
+
+    <div class="about-container">
+      <figure>
+        <img class="img_me" src="Me and mom.jpeg" alt="Conner Kirkman" height="270" width="200">
+      </figure>
+      <div class="about-text">
+        <p>
+          <b>Hi again! I'm Conner Kirkman,</b> a student at the University of Michigan. I've always loved computers, and I'm most 
+          interested in topics such as software development, artificial intelligence and game development. <br><br>
+          When I'm not hitting the books, you'll likely find me outdoors. I have a passion for sailing and love the 
+          thrill of being out on the water. Running is another way I stay active, and I enjoy spending as much time 
+          outside as possible—whether it's running, biking, or just soaking up the sunshine.<br><br>
+          When it's time to unwind, I love diving into video games. They provide a great way to relax and connect 
+          with friends.
+        </p>
+      </div>
+    </div>
+  </main>
+</section>
+
+
         <footer>
             <p>Created & Designed by Conner Kirkman</p>
         </footer>
-</div>
+    </div>
 
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    </body>
+    <!-- Scroll Animation Script -->
+     <script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Work cards animation (keep your current behavior)
+  const workContainer = document.getElementById('work-container');
+  const workCards = document.querySelectorAll('.work-card');
+
+  const workObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        workCards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add('animate-in');
+          }, index * 200);
+        });
+        workObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (workContainer) workObserver.observe(workContainer);
+
+  // IMPROVED: Project cards slide-in - observe each card individually
+  const projectCards = document.querySelectorAll('.project-card');
+
+const projectObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      projectCards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('animate-in');
+        }, index * 200); // Same stagger as work cards
+      });
+      projectObserver.disconnect(); // Stop observing after first trigger
+    }
+  });
+}, { threshold: 0.3 });
+
+projectCards.forEach(card => {
+  projectObserver.observe(card);
+});
+
+
+  // Observe each project card individually
+  projectCards.forEach(card => {
+    projectObserver.observe(card);
+  });
+});
+</script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
 </html>

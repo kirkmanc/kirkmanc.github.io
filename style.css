@@ -1,473 +1,858 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
-.wrapper{
-    height:100vh;
-    overflow-y:auto;
-    overflow-x: hidden;
-    perspective: 10px;
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
 }
 
-header{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    transform-style: preserve-3d;
-    z-index: -1;
-    text-decoration: none !important;
-
-    
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+  text-decoration: none !important;
 }
 
 .close1,
 .close2,
 .close3,
-.close4{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.close4 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.close1{
-    transform: translateZ(-2.5px) scale(1.255);
+.close1 {
+  transform: translateZ(-2.5px) scale(1.255);
 }
-.close2{
-    transform: translateZ(-6px) scale(1.6);
+.close2 {
+  transform: translateZ(-6px) scale(1.6);
 }
-.close3{
-    transform: translateZ(-7px) scale(1.77);
+.close3 {
+  transform: translateZ(-7px) scale(1.77);
 }
-.close4{
-    transform: translateZ(-10px) scale(2);
+.close4 {
+  transform: translateZ(-10px) scale(2);
 }
 
 .title {
-    position: relative; /* Keep this as reference point */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3rem;
-    color: rgb(197, 210, 221);
-    text-shadow: 0 0 5px black;
-    text-decoration: none !important;
-    text-align: center;
-    margin-bottom: 4F0px;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  color: rgb(197, 210, 221);
+  text-shadow: 0 0 5px black;
+  text-decoration: none !important;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: -10rem;
+  animation: fadeInUp 1s ease-out 0.5s both;
 }
+
 .subtitle {
-    position: relative; /* Change from absolute */
-    top: auto; /* Remove fixed top position */
-    left: auto; /* Remove fixed left position */
-    transform: none; /* Remove manual centering */
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2rem;
-    color: rgb(197, 210, 221);
-    text-shadow: 0 0 5px black;
-    white-space: nowrap;
-    overflow: hidden;
-    margin-top: -5rem; /* Adjust as needed */
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  color: rgb(197, 210, 221);
+  text-shadow: 0 0 5px black;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: -1rem;
+  animation: fadeIn 1s ease-out 1s both;
 }
 
 h2 {
-    font-size: 2.5rem; /* Increase the font size */
-    font-weight: bold; /* Make it stand out */
-    text-align: center; /* Keep it centered */
-    margin-top: 2rem; /* Adjust spacing */
-    color: rgb(99, 163, 219); /* Match the existing theme */
-    text-shadow: 0 0 8px rgb(38, 38, 38); /* Add a subtle glow effect */
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  color: rgb(99, 163, 219);
+  text-shadow: 0 0 8px rgb(38, 38, 38);
 }
 
 #typing-text {
-    position: relative; /* Change from absolute to relative */
-    margin-top: -2rem; /* Moves it up slightly relative to .title */
-    
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2rem;
-    color: rgb(197, 210, 221);
-    text-shadow: 0 0 5px black;
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: center;
+  position: relative;
+  margin-top: -2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  color: rgb(197, 210, 221);
+  text-shadow: 0 0 5px black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
 }
 
-
-.img_me{
-    float: right;
-}
-
-.img_gbg{
-    float: left;
-}
-
+/* Enhanced Navigation Buttons */
 nav ul {
-    list-style-type: none; /* Remove bullet points */
-    margin: 3vh 0 0vh 0vw;
-    padding: 0;
-    display: flex; /* Arrange items horizontally */
-    justify-content: flex-end; /* Align items to the right */
-    gap: 20px; /* Add space between the links */
+  list-style-type: none;
+  margin: 3vh 0 0vh 0vw;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  animation: fadeInUp 1s ease-out 1.5s both;
 }
 
 nav ul li {
-    display: inline; /* Make list items inline */
+  display: inline;
 }
 
 .nav-link {
-    text-decoration: none; /* Remove underline */
-    color: white; /* Text color */
-    font-size: 17px; /* Font size */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;; /* Font family */
-    padding: 5px 10px; /* Padding for clickable area */
-    transition: color 0.3s ease; /* Smooth hover effect */
-    cursor: pointer; /* Change cursor on hover */
-    white-space: nowrap; /* Prevent line breaks */
-    font-weight: 500; /* Use a lighter font weight */
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
-/* Hover effect */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  background: radial-gradient(circle, currentColor 0%, transparent 70%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
 .nav-link:hover {
-    color: #20208e; /* Change text color on hover */
+  transform: scale(1.1) translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
-/* Center the nav menu horizontally without wrapping */
-nav {
-    display: flex;
-    justify-content: flex-end; /* Right-align the navigation */
-    padding-right: 20px; /* Add padding from the right edge */
+.nav-link:hover::before {
+  opacity: 0.2;
+  transform: scale(1.2);
 }
 
-.buttons{
-    min-height: 30vh;
-    margin: -30vh 0 38vh 74vw;
-    color: 20208e(41, 102, 145);
-    position: absolute;
-    font-size: 1rem;
-    text-decoration: none;
+.nav-link:nth-child(1):hover {
+  color: #4ecdc4;
 }
 
-.socials{
-    position: absolute;
-    min-height: 30vh;
-    margin: -30vh 0 30vh -85vw;
-    text-decoration: none;
+.nav-link:nth-child(2):hover {
+  color: #45b7d1;
 }
 
-.btn-primary {
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;        
-    background-color: rgba(197, 210, 221, 0);
-    border: 1px solid transparent;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    color:rgb(206, 216, 225)
-}
-.btn-primary:hover{
-    color: #20208e;
+.nav-link:nth-child(3):hover {
+  color: #96ceb4;
 }
 
-
-.btn-app2 {
-    position: absolute;
-    margin: -5vh 0 -40vh 10vw;
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;        
-    background-color: rgb(14, 49, 80);
-    border: 7px solid transparent;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    color: rgb(165, 202, 232);
-    cursor: pointer; /* Add this to change the cursor on hover */
+.buttons {
+  position: relative;        /* no need for absolute if you want them to flow */
+  margin-top: 1.5rem 0 0 0;        /* push them down under the subtitle */
+  min-height: auto;
+  color: rgb(41, 102, 145);
+  font-size: 1rem;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-/* Hover effect for the "Visit" button */
-.btn-app2:hover {
-    color: #4c4ebf;
+/* Social icons */
+.socials {
+  position: relative;        /* same idea: relative positioning */
+  margin-top: 0.5rem;       /* space under buttons */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  animation: fadeInUp 1s ease-out 2s both;
 }
 
-/* For the "Figma" button */
-.btn-app {
-    position: absolute;
-    margin: -5vh 0 -40vh 28vw;
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;        
-    background-color: rgb(14, 49, 80);
-    border: 7px solid transparent;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    color: rgb(165, 202, 232);
-    cursor: pointer; /* Add this to change the cursor on hover */
+
+.social-icon {
+  position: relative;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.945);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
 }
 
-/* Hover effect for the "Figma" button */
-.btn-app:hover {
-    color: #4c4ebf;
-}
-    
-
-section{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    padding :2rem;
-    background-color: #094663;
-    color: rgb(165, 202, 232)
+.social-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  background: radial-gradient(circle, currentColor 0%, transparent 70%);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
-.project-info{
-    margin: -2vh 0 20vh 17vw;
+.social-icon:hover {
+  transform: scale(1.1) translateY(-3px);
+  background: rgba(255, 255, 255, 0.192);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-.project-info1{
-    margin: -2vh 0 20vh 28vw;
+.social-icon:hover::before {
+  opacity: 0.2;
+  transform: scale(1.2);
 }
 
-.kirks-info{
-    margin: -2vh 0 20vh 2vw;
+.social-icon:nth-child(1):hover {
+  color: #e91e63;
 }
 
-.kirks-info2{
-    margin: -2vh 0 20vh 2vw;
+.social-icon:nth-child(2):hover {
+  color: #1392fa;
 }
 
-.kirks-info3{
-    margin: 2vh 0 -50vh 2vw;
+.social-icon:nth-child(3):hover {
+  color: #4caf50;
 }
 
-footer{
-    padding: 2rem;
-    color:rgb(165, 202, 232)
+/* Remove white space between header and sections */
+.section {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  padding: 2rem;
+  color: rgb(165, 202, 232);
+  position: relative;
+  overflow: hidden;
+  margin: 0;
 }
 
-body{
-    background: #094663;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+/* Projects Section - Shallow underwater */
+/* Projects Section - Light to mid aqua */
+.section.projects {
+  background: linear-gradient(
+    #1d648c,
+    #1a597e,
+    #154a68
+  );
+  padding-top: 2rem;
 }
-.social-icon{
-    color: #e7e7e7;
-    transition: color 0.2s;
-    text-decoration: none;
-    margin: 0 10px;
+
+/* Work Section - Mid aqua to darker teal */
+.section.work {
+  background: linear-gradient(
+    #154a68,
+    #113c55,
+    #10374e
+  );
 }
 
-.social-icon:hover{
-        color: #20208e;
-    }
-    
-    .project-card {
-        position: relative;
-        width: 290px;
-        height: 290px;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-        transform: scale(1); /* Default size */
-        cursor: pointer; /* Ensures a pointer cursor for consistency */
-    }
-    
-    /* Ensures that both linked and non-linked cards have the effect */
-    .project-card:hover {
-        transform: scale(1.05); /* Zoom in effect */
-    }
-    
-    /* Ensure the project image fits properly */
-    .project-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensures entire image fits without cutoff */
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .project-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0; /* Initially hidden */
-        background: linear-gradient(to top, rgba(0, 90, 180, 0.9), rgba(0, 50, 120, 0.95)); /* Blue gradient */
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: height 0.3s ease-in-out;
-        padding: 0;
-        font-size: 1rem;
-        overflow: hidden;
-        border-radius: 10px; /* Optional rounded corners */
-    }
-    
-    /* Hover Effect - Expands the overlay to cover the full image */
-    .project-card:hover .project-overlay {
-        height: 100%;
-        padding: 15px;
-    }
-    
-    /* Text styling */
-    .project-overlay p {
-        margin-top: 35px;
-        margin-left: -10px;
-        max-width: 90%;
-        line-height: 1.4;
-        font-weight: bold;
-        opacity: 0; /* Initially hidden */
-        transition: opacity 0.2s ease-in-out;
-    }
-    
-    /* Make text appear when the overlay covers the image */
-    .project-card:hover .project-overlay p {
-        opacity: 1;
-    }
-    
-    /* Optional: Slight zoom effect on the image when hovered */
-    .project-card:hover .project-img {
-        transform: scale(1.05);
-    }
-    .projects-container {
-        display: flex; /* Arrange child elements in a row */
-        flex-wrap: wrap; /* Allow wrapping to a new line if needed */
-        justify-content: center; /* Center the cards horizontally */
-        gap: 40px; /* Add space between the cards */
-        padding: 20px; /* Optional: Add padding around the container */
-    }
-    
-    .project-card {
-        flex: 1 1 calc(33.33% - 40px); /* Make each card take up 1/3 of the row, with some margin */
-        max-width: 290px; /* Optional: Set a max width to ensure consistent size */
-        box-sizing: border-box; /* Ensure padding and borders are included in width */
-    }
+/* About Section - Dark teal to deep ocean */
+.section.about {
+  background: linear-gradient(
+    #10374e,
+    #0f3a4d,
+    #0b2c3a
+  );
+}
 
-    .project-overlay p b {
-        color: #FFD700; /* Gold color for contrast */
-        font-size: 1.2rem;
-        transition: transform 0.3s ease-in-out;
-        
-    }
 
-    .project-link {
-        text-decoration: none; /* Remove underline */
-        display: inline-block; /* Ensures clickable area is contained */
-    }
-    .project-link .project-card:hover {
-        transform: scale(1.05); /* Slight zoom effect */
-        transition: transform 0.3s ease-in-out;
-    }
+/* Optional soft separators */
+.section + .section {
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
 
-    .project-card:not(:hover) {
-        transform: scale(1); /* Smoothly returns to normal size */
-        transition: transform 0.3s ease-in-out; /* Smooth zoom-out */
-    }
-    
-    /* Styling for job titles */
-    .work-overlay p b {
-        color: #FFD700; /* Gold color for contrast */
-        font-size: 1.2rem;
-    }
-    
-    .work-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
-        padding: 20px;
-    }
-    
-    .work-card {
-        position: relative;
-        width: 480px; /* Increased width */
-        height: 240px; /* Increased height to maintain rectangular shape */
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .work-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensures the image fills the space without distortion */
-        display: block;
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .work-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background: linear-gradient(to top, rgba(0, 90, 180, 0.9), rgba(0, 50, 120, 0.95));
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: height 0.3s ease-in-out;
-        padding: 0;
-        font-size: 1rem;
-        overflow: hidden;
-        border-radius: 10px;
-    }
-    
-    .work-card:hover .work-overlay {
-        height: 100%;
-        padding: 15px;
-    }
-    
-    .work-overlay p {
-            margin-top: 40px;
-            margin-left: 5px;
-            max-width: 90%;
-            line-height: 1.4;
-            font-weight: bold;
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.2s ease-in-out;
-        }
-    
-    .work-card:hover .work-overlay p {
-        opacity: 1;
-    }
-    
-    .work-card:hover .work-img {
-        transform: scale(1.05);
-    }
 
-    .about-container {
-        display: flex;
-        align-items: center;
-        gap: 20px; /* Space between image and text */
-        background: rgba(255, 255, 255, 0.1); /* Subtle background */
-        padding: 50px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    
-    .about-container figure {
-        margin: 20;
-    }
-    
-    .img_me {
-        width: 300px; /* Increase width */
-        height: 390px; /* Maintain aspect ratio */
-        border-radius: 10px; /* Keep rounded corners */
-        object-fit: cover; /* Ensures it fills the space properly */
-    }
-    
-    .about-text {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: rgb(200, 220, 240);
-    }
+/* Underwater Effects */
+.underwater-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+/* Enhanced Bubble System */
+.bubble {
+  position: absolute;
+  background: rgba(6, 182, 212, 0.4);
+  border-radius: 50%;
+  box-shadow: 
+    inset -10px -10px 20px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+/* Projects section bubbles */
+.bubble-1 {
+  width: 20px;
+  height: 20px;
+  top: 15%;
+  left: 8%;
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.bubble-2 {
+  width: 12px;
+  height: 12px;
+  top: 25%;
+  right: 15%;
+  animation: float 4s ease-in-out infinite;
+  animation-delay: .2s;
+}
+
+.bubble-3 {
+  width: 16px;
+  height: 16px;
+  bottom: 30%;
+  left: 20%;
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.bubble-4 {
+  width: 15px;
+  height: 15px;
+  top: 40%;
+  right: 49%;
+  animation: float 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.bubble-5 {
+  width: 14px;
+  height: 14px;
+  top: 60%;
+  left: 5%;
+  animation: float 7s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.bubble-6 {
+  width: 18px;
+  height: 18px;
+  top: 70%;
+  right: 10%;
+  animation: float 4.5s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+.bubble-7 {
+  width: 8px;
+  height: 8px;
+  top: 80%;
+  left: 60%;
+  animation: float 3.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.bubble-8 {
+  width: 22px;
+  height: 22px;
+  top: 30%;
+  left: 94%;
+  animation: float 8s ease-in-out infinite;
+  animation-delay: .4;
+}
+
+.bubble-9 {
+  width: 11px;
+  height: 11px;
+  bottom: 20%;
+  right: 35%;
+  animation: float 5.5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.bubble-10 {
+  width: 15px;
+  height: 15px;
+  top: 35%;
+  left: 75%;
+  animation: float 6.5s ease-in-out infinite;
+  animation-delay: .2s;
+}
+
+/* Work section bubbles */
+.work-bubble-1 {
+  width: 14px;
+  height: 14px;
+  top: 15%;
+  left: 6%;
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.work-bubble-2 {
+  width: 10px;
+  height: 10px;
+  top: 85%;
+  right: 8%;
+  animation: float 4s ease-in-out infinite;
+  animation-delay: .6s;
+}
+
+.work-bubble-3 {
+  width: 18px;
+  height: 18px;
+  bottom: 88%;
+  left: 80%;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: .5s;
+}
+
+.work-bubble-4 {
+  width: 16px;
+  height: 16px;
+  top: 75%;
+  right: 90%;
+  animation: float 3.5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.work-bubble-5 {
+  width: 20px;
+  height: 20px;
+  top: 57%;
+  left: 40%;
+  animation: float 9s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+/* About section bubbles */
+.about-bubble-1 {
+  width: 13px;
+  height: 13px;
+  top: 40%;
+  left: 10%;
+  animation: float 5.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.about-bubble-2 {
+  width: 17px;
+  height: 17px;
+  top: 30%;
+  right: 22%;
+  animation: float 4.5s ease-in-out infinite;
+  animation-delay: 0.7s;
+}
+
+.about-bubble-3 {
+  width: 9px;
+  height: 9px;
+  bottom: 30%;
+  left: 15%;
+  animation: float 6.5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.about-bubble-4 {
+  width: 12px;
+  height: 12px;
+  top: 80%;
+  right: 12%;
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.about-bubble-5 {
+  width: 12px;
+  height: 12px;
+  top: 40%;
+  right: 5%;
+  animation: float 3s ease-in-out infinite;
+  animation-delay: 0.2;
+}
+
+.current-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.1), transparent);
+  transform: skewY(-12deg);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.deep-water-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(30, 64, 175, 0.3) 0%, transparent 50%, rgba(30, 41, 59, 0.5) 100%);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Project Cards - Fixed hover effect */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Replace your existing .project-card styles with this */
+.project-card {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.6s ease-in-out; /* Smooth transitions for all properties */
+  opacity: 0;
+  transform: translateY(100px); /* Start hidden below */
+  cursor: pointer;
+  transform-origin: center center;
+}
+
+.project-card.animate-in {
+  opacity: 1;
+  transform: translateY(0); /* Slide up to normal position */
+}
+
+.project-card:hover {
+  transform: translateY(0) scale(1.08); /* Hover: Grow slightly */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+/* Also update the responsive design for mobile */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .socials {
+    margin-top: -10vh;
+  }
+
+  .project-card {
+    width: 300px;  /* Increased from 250px */
+    height: 300px; /* Increased from 250px */
+  }
+
+  .work-card {
+    width: 350px;
+    height: 200px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .img_me {
+    width: 250px;
+    height: 320px;
+  }
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, #0940d6e3 0%, #2bcfd4b4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.3s ease-in-out;
+  padding: 0;
+  font-size: 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-card:hover .project-overlay {
+  height: 100%;
+  padding: 15px;
+}
+
+.project-overlay p {
+  margin-top: 170px;
+  margin-left: -10px;
+  max-width: 90%;
+  line-height: 1.4;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Add text shadow for better readability */
+}
+
+.project-card:hover .project-overlay p {
+  opacity: 1;
+}
+
+.project-overlay p b {
+  color: #FFD700; /* Keep the gold color for project titles */
+  font-size: 1.2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Stronger shadow for titles */
+}
+
+.project-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Work Cards - Fixed scroll-triggered animation */
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.work-card {
+  position: relative;
+  width: 550px;
+  height: 275px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.6s ease-in-out; /* Transition all properties */
+  opacity: 0;
+  transform: translateY(100px); /* Initial hidden state */
+}
+
+.work-card.animate-in {
+  opacity: 1;
+  transform: translateY(0); /* Fully visible state */
+}
+
+.work-card:hover {
+  transform: translateY(0) scale(1.05); /* Hover effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.work-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease-in-out; /* Make image scale smoothly with the card */
+}
+
+.work-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, #0940d6e3 0%, #2bcfd4b4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.3s ease-in-out;
+  padding: 0;
+  font-size: 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.work-card:hover .work-overlay {
+  height: 100%;
+  padding: 15px;
+}
+
+.work-overlay p {
+  margin-top: 115px;
+  margin-left: -20px;
+  max-width: 90%;
+  line-height: 1.4;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.work-card:hover .work-overlay p {
+  opacity: 1;
+}
+
+.work-card:hover .work-img {
+  transform: scale(1.05);
+}
+
+.work-overlay p b {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.about-container figure {
+  margin: 0;
+}
+
+.img_me {
+  width: 300px;
+  height: 390px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.img_me:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgb(200, 220, 240);
+}
+
+.about-text b {
+  color: #ffd700;
+}
+
+footer {
+  padding: 2rem;
+  color: rgb(165, 202, 232);
+  background: #000;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 0.6;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .socials {
+    margin-top: -10vh;
+  }
+
+  .project-card {
+    width: 250px;
+    height: 250px;
+  }
+
+  .work-card {
+    width: 350px;
+    height: 200px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .img_me {
+    width: 250px;
+    height: 320px;
+  }
+}
