@@ -634,6 +634,15 @@ nav ul li {
   font-size: 1.2rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Stronger shadow for titles */
 }
+.project-overlay .visit-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #FFD700; /* Yellow color for the Visit text */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
 .visit-text {
   margin-top: 10px;
@@ -646,7 +655,22 @@ nav ul li {
   gap: 5px; /* Adds some space between the icon and the text */
 }
 
-.visit-text ion-icon {
+.project-overlay .visit-text ion-icon {
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
+.project-overlay .walkthrough-text {
+  margin-top: 10px;
+  margin-left: -120px;
+  font-size: 1rem;
+  color: #FFD700; /* Yellow color for the Visit text */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Adds some space between the icon and the text */
+}
+
+.project-overlay .walkthrough-text ion-icon {
   font-size: 1.2rem; /* Adjust icon size */
 }
 
