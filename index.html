@@ -103,18 +103,26 @@
 
 
     <div class="projects-container">
-      <div class="project-card">
-        <img class="project-img" src="MiHub.png" alt="MiHub Layout Tool">
-        <div class="project-overlay">
-          <p><b>MiHub - Layout Tool</b><br><br>Tool designed to optimize organization, tracking, and placement of the warehouse inventory and modular job units.</p>
+      <a href="https://drive.google.com/file/d/14UYEsWfFkdYu70rMgBpVIzNbElbFw1iW/view?usp=drive_link" target="_blank" class="project-link">
+        <div class="project-card">
+          <img class="project-img" src="MiHub.png" alt="MiHub Layout Tool">
+          <div class="project-overlay">
+            <p><b>MiHub - Layout Tool</b><br><br>Tool designed to optimize organization, tracking, and placement of the warehouse inventory and modular job units.</p>
+              <span class="walkthrough-text">
+                <ion-icon name="open-outline"></ion-icon> Watch Walkthrough
+              </span>
+          </div>
         </div>
-      </div>
-
+      </a>
+      
       <a href="https://kirks.com" target="_blank" class="project-link">
         <div class="project-card">
           <img class="project-img" src="kirkk.png" alt="Kirk's Website">
           <div class="project-overlay">
             <p><b>Kirk's Website</b><br><br>Website developed to let customers easily find and acquire parts they need.</p>
+            <span class="visit-text">
+              <ion-icon name="open-outline"></ion-icon> Visit
+            </span>
           </div>
         </div>
       </a>
@@ -131,6 +139,9 @@
           <img class="project-img" src="ktpv2.webp" alt="KTP">
           <div class="project-overlay">
             <p><b>KTP Life App</b><br><br>iOS and Android app for managing rush, tracking membership, and working with alumni.</p>
+              <span class="visit-text">
+                <ion-icon name="open-outline"></ion-icon> Visit
+              </span>
           </div>
         </div>
       </a>
@@ -242,6 +253,7 @@
       <figure>
         <img class="img_me" src="Me and mom.jpeg" alt="Conner Kirkman" height="270" width="200">
       </figure>
+
       <div class="about-text">
         <p>
           <b>Hi again! I'm Conner Kirkman,</b> a student at the University of Michigan. I've always loved computers, and I'm most 
@@ -265,53 +277,54 @@
 
     <!-- Scroll Animation Script -->
      <script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Work cards animation (keep your current behavior)
-  const workContainer = document.getElementById('work-container');
-  const workCards = document.querySelectorAll('.work-card');
+      document.addEventListener("DOMContentLoaded", function() {
+        // Work cards animation (keep your current behavior)
+        const workContainer = document.getElementById('work-container');
+        const workCards = document.querySelectorAll('.work-card');
 
-  const workObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        workCards.forEach((card, index) => {
-          setTimeout(() => {
-            card.classList.add('animate-in');
-          }, index * 200);
+        const workObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              workCards.forEach((card, index) => {
+                setTimeout(() => {
+                  card.classList.add('animate-in');
+                }, index * 200);
+              });
+              workObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.3 });
+
+        if (workContainer) workObserver.observe(workContainer);
+
+        // IMPROVED: Project cards slide-in - observe each card individually
+        const projectCards = document.querySelectorAll('.project-card');
+
+      const projectObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            projectCards.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add('animate-in');
+              }, index * 200); // Same stagger as work cards
+            });
+            projectObserver.disconnect(); // Stop observing after first trigger
+          }
         });
-        workObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
+      }, { threshold: 0.3 });
 
-  if (workContainer) workObserver.observe(workContainer);
-
-  // IMPROVED: Project cards slide-in - observe each card individually
-  const projectCards = document.querySelectorAll('.project-card');
-
-const projectObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      projectCards.forEach((card, index) => {
-        setTimeout(() => {
-          card.classList.add('animate-in');
-        }, index * 200); // Same stagger as work cards
+      projectCards.forEach(card => {
+        projectObserver.observe(card);
       });
-      projectObserver.disconnect(); // Stop observing after first trigger
-    }
-  });
-}, { threshold: 0.3 });
-
-projectCards.forEach(card => {
-  projectObserver.observe(card);
-});
 
 
-  // Observe each project card individually
-  projectCards.forEach(card => {
-    projectObserver.observe(card);
-  });
-});
-</script>
+        // Observe each project card individually
+        projectCards.forEach(card => {
+          projectObserver.observe(card);
+        });
+      });
+    </script>
+
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
