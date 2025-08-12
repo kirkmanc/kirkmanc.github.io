@@ -829,6 +829,7 @@ nav ul li {
   left: 0;
   width: 100%;
   height: auto;
+  max-height: 300px; /* Adjust as needed */
   object-fit: cover;
   object-position: bottom;
   pointer-events: none; /* Allows clicking through the image */
@@ -848,6 +849,7 @@ footer p {
   position: relative;
   z-index: 2; /* Ensures text appears above the image */
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
