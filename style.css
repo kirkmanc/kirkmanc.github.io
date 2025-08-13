@@ -783,10 +783,6 @@ nav ul li {
   opacity: 1;
 }
 
-.work-card:hover .work-img {
-  transform: scale(1.05);
-}
-
 .work-overlay p b {
   color: #ffd700;
   font-size: 1.2rem;
