@@ -46,6 +46,17 @@ header {
 
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .title {
   position: relative;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
