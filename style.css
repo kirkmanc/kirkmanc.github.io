@@ -333,36 +333,70 @@ main{ margin-left: var(--gauge-w); }
 /* ==========================================================================
    WORK — chapter timeline
    ========================================================================== */
-.chapters{ list-style:none; margin: 0 auto; padding:0; max-width: 1000px; display:flex; flex-direction:column; gap: 6rem; }
+.chapters{
+  --card-peek: 110px;
+
+  list-style:none;
+  margin:0 auto;
+  padding:0 0 4vh;
+  max-width:1000px;
+
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+
+/* Individual stacked cards */
 .chapter{
-  position:relative; display:grid; grid-template-columns: 90px 1fr; gap: 2rem; align-items:start;
-}
-.chapter-num{
-  font-family: var(--f-display); font-style:italic; font-weight:300;
-  font-size: 3.5rem; color: var(--line); line-height:1; text-align:center;
-}
-.chapter-body{ min-width:0; }
-.chapter-media{
-  width:100%; aspect-ratio: 2 / 1; overflow:hidden; border-radius:6px;
-  border:1px solid var(--line); margin-bottom:1.5rem; position:relative;
-}
-.chapter-media img{ width:100%; height:100%; object-fit:cover; transition: transform .8s var(--ease); }
-.chapter:hover .chapter-media img{ transform: scale(1.04); }
-.chapter-org{ font-family: var(--f-mono); font-size:.72rem; letter-spacing:.15em; text-transform:uppercase; color: var(--signal); margin:0 0 .4rem; }
-.chapter-copy h3{ font-family: var(--f-display); font-weight:600; font-size: clamp(1.5rem,2.4vw,2rem); margin:0 0 .75rem; color: var(--foam); }
-.chapter-copy p{ color: var(--mist); line-height:1.65; margin:0; max-width: 60ch; }
+  position:sticky;
+  top:7vh;
 
-.chapter--fluid .chapter-media{ border-radius: 6px 40px 6px 40px; }
-.chapter--fluid .chapter-org{ color: #9fd6e0; }
+  min-height:420px;
 
-@media (max-width: 700px){
-  .chapter{ grid-template-columns: 1fr; }
-  .chapter-num{ text-align:left; }
+  display:grid;
+  grid-template-columns:72px 1fr;
+  gap:1.5rem;
+  align-items:start;
+
+  padding:1rem;
+
+  /*
+    Cards still overlap, but each card leaves
+    a little more of the previous card visible.
+  */
+  margin-bottom:calc(38vh + var(--card-peek));
+
+  border:1px solid rgba(223,238,245,.16);
+  border-radius:14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20,66,92,.98),
+      rgba(7,16,25,.98)
+    );
+
+  box-shadow:
+    0 22px 60px rgba(0,0,0,.24),
+    0 2px 0 rgba(223,238,245,.04) inset;
+
+  transform-origin:center top;
+  will-change:transform, filter, opacity;
+
+  transition:
+    box-shadow .35s var(--ease),
+    border-color .35s var(--ease);
 }
 
+/* Remove the giant empty space after the LAST card */
+.chapter:last-child{
+  margin-bottom:65vh;
+}
 /* ==========================================================================
    ABOUT
    ========================================================================== */
+
+
 .about-grid{
   position:relative; z-index:2;
   display:grid; grid-template-columns: 300px 1fr; gap: 3.5rem;
@@ -623,6 +657,10 @@ main{ margin-left: var(--gauge-w); }
   }
 }
 
+.section.about{
+  margin-top:-60vh;
+  padding-top:5rem;
+}
 
 /* ==========================================================================
    FOOTER
